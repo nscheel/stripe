@@ -23,9 +23,9 @@ sites <- read.csv("stripe_coordinates.csv")
 #getting the map
 register_google(key = "AIzaSyBVVexkM5Z51lP4uDzVjEnxwrCm_JMUriE")
 map_mendota <- get_map(location = c(lon = mean(coordinates$lon), lat = mean(coordinates$lat)), zoom = 12,
-                      maptype = "satellite", scale = 2)
+                       maptype = "satellite", scale = 2)
 figure_1 <- ggmap(map_mendota)
-map_of_stripe_sites <- figure_1 + geom_point(data=sites, aes(x=lon, y=lat), color="red", size=1, alpha=0.5) 
+map_of_stripe_sites <- figure_1 + geom_point(data=sites, aes(x=lon, y=lat), color="#FF00FF", size=1, alpha=0.5) 
 
 map_of_stripe_sites
 
